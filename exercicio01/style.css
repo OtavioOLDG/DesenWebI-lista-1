@@ -1,3 +1,42 @@
-nav {
-  display: block;
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: crimson;
+    text-decoration: none;
+
 }
+
+nav a
+{   
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover
+{
+    color: white;
+    background-color: blueviolet;
+    height: 100%;
+}
+
+nav ul
+{   
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.linha{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: none;
+}
+.linha
+
+footer{
+    display: block;
+    float: left;
+}
+
+
+
