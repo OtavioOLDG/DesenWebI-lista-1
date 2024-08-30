@@ -1,15 +1,46 @@
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+
+
 nav{
     display: flex;
     justify-content: space-between;
-    background-color: crimson;
+    background-color: auto;
     text-decoration: none;
-
+    font-size: large;
+    border-right: solid white 2px; 
+    border-bottom: 2px solid rgb(0, 0, 0);  
 }
 
 nav a
 {   
     text-decoration: none;
     padding: 10px;
+}
+
+nav li a
+{   
+    text-decoration: none;
+    padding: 10px;
+    border-left: solid white 2px;  
+}
+
+nav li
+{
+    display: inline;
+    justify-content: baseline;
+    padding-top: 10px;
+}
+nav ul
+{
+    display: flex;
+    list-style: none;
+    padding: 0;
 }
 
 nav a:hover
@@ -28,15 +59,91 @@ nav ul
 
 .linha{
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: none;
 }
-.linha
 
 footer{
     display: block;
     float: left;
+    background-color: black;
+    padding: 0%;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 0%;
+    justify-content: bottom;
 }
 
 
+main div{
+    display: inline-block;
+    justify-content: space-between;
+    padding: 10px;
+}
+main .container{
+    padding: 20px;
+}
+main div p{
+    padding: 10px;
+}
 
+main div h1{
+    color: rgb(32, 32, 32);
+}
+
+main div h2{
+    color: rgb(32, 32, 32);
+}
+
+.btn.btn-primary{
+    padding: 5px;
+    background-color: rgb(8, 119, 49);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.8s;
+    transition-property: background-color, transform; /* Aplica a transição para essas propriedades */
+    transition: all 0.4s ease; /* Aplica a transição a todas as propriedades */
+    display: inline-block; /* Garante que o botão se comporte corretamente com o transform */
+}
+
+/* Efeito de animação ao passar o cursor */
+.btn.btn-primary:hover {
+    background-color: rgb(6, 95, 39); /* Muda a cor de fundo */
+    transform: scale(1.1); /* Aumenta o tamanho do botão ligeiramente */
+}
+
+.btn.btn-small.btn-secondary{
+    padding: 5px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 800ms;
+    transition-property: background-color, transform;
+    transition: all 0.4s ease; /* Aplica a transição a todas as propriedades */
+    display: inline-block;
+}
+
+.btn.btn-small.btn-secondary:hover {
+    background-color: rgb(117, 25, 203); /* Muda a cor de fundo */
+    transform: scale(1); /* Aumenta o tamanho do botão ligeiramente */
+}
+
+.coluna{
+    display: inline-block;
+    padding: 10px;
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 5%;
+    margin: 10px;
+}
