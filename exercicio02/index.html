@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <div>
+                <input type="text" id="filter" placeholder="Filtrar tarefas...">
+                <button id="theme-toggle">Trocar Tema</button>
+            </div>
+        </header>
+        <main>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Nova tarefa..." required>
+                <button type="submit">Adicionar</button>
+            </form>
+            <ul id="task-list"></ul>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
