@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  
 
   themeToggle.addEventListener("click", function () {
     theme = theme === "light" ? "dark" : "light";
@@ -72,3 +73,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   renderTasks();
 });
+
+

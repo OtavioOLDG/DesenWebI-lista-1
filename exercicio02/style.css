@@ -3,8 +3,9 @@
     --background-color-dark: #333;
     --text-color-light: #333;
     --text-color-dark: #f4f4f4;
-    --task-color: #fff;
-    --task-completed-color: #d3d3d3;
+    --task-color: #ead4d4;
+    --task-completed-color-light: #d3d3d3; /* Cor para tarefa concluída no tema claro */
+    --task-completed-color-dark: #555;     /* Cor para tarefa concluída no tema escuro */
 }
 
 body.light-theme {
@@ -12,9 +13,47 @@ body.light-theme {
     color: var(--text-color-light);
 }
 
+body.light-theme #task-list li.completed {
+    background-color: var(--task-completed-color-light);
+}
+
 body.dark-theme {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
+}
+
+body.dark-theme #task-list li.completed {
+    background-color: var(--task-completed-color-dark);
+}
+
+body.light-theme #task-list li {
+    background-color: var(--task-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.light-theme #task-list li.completed {
+    text-decoration: line-through;
+}
+
+body.dark-theme #task-list li {
+    background-color: var(--task-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+body.dark-theme #task-list li.completed {
+    text-decoration: line-through;
+    color: white;
 }
 
 body {
@@ -33,26 +72,6 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-}
-
-#task-list {
-    list-style: none;
-    padding: 0;
-}
-
-#task-list li {
-    background-color: var(--task-color);
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#task-list li.completed {
-    background-color: var(--task-completed-color);
-    text-decoration: line-through;
 }
 
 button {
