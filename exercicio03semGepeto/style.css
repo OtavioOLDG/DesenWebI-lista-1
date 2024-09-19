@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c2e5a0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+header{
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main{
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#form-section{
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-group{
+    flex: 1 1 200px;
+}
+
+.input-group label{
+    display: block;
+    margin: 5px;
+}
+
+.input-group input[type="number"]{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #becad2;
+    background-color: #d5dbd0;
+
+}
+
+
+.form-check{
+    flex: 1 1 100%;
+}
+
+.radio{
+    display: flex;
+    gap: 10px;
+}
+
+.radio-input{
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+
+form button{
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #34495e;
+}
+
+#mensagem.success{
+    display: none;
+    background-color: #2c3e50;
+    color: black;
+    padding: 10px;
+}
+
+#mensagem.error{
+    display: block;
+    background-color: #e11802;
+    color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#result{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+} 
+
+.card{
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    max-width: 300px;
+    flex-basis: calc(25% - 20px);
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.card .actions{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.card a{
+    padding: 5px 10px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 5px;
+}
