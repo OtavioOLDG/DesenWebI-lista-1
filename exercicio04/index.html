@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Foto e Localização</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tabelinha da Lembrança</h1>
+        <p>Tire uma foto e recorde o momento</p>
+    </header>
+
+    <!-- Formulário de captura de foto e informações -->
+     <section id="form">
+        <form id="photoForm">
+            <div class="input-form">
+                <label for="photoTitle">Título da Foto (obrigatório):</label>
+                <input type="text" id="photoTitle" name="title" required>
+            </div>
+
+            <div class="textarea-form">
+                <label for="photoDescription">Descrição (opcional):</label>
+                <textarea id="photoDescription" name="description"></textarea>
+            </div>
+
+            <div class="input-button-form">
+                <label for="foto-data">Escolha uma foto ou arquivo (opcional):</label>
+                <button type="button" id="takePhotoButton">Tirar Foto</button>
+                <input type="file" id="uploadPhotoInput" accept="image/*">
+            </div>
+
+            <div>
+                <button type="button" id="removePhotoButton">Remover Foto</button>
+            </div>
+
+            <div id="photoPreview">
+                <!-- Foto tirada ou carregada será exibida aqui -->
+            </div>
+
+            <div>
+                <button type="button" id="getLocationButton">Marcar Localização</button>
+            </div>
+
+            <div id="locationPreview">
+                <!-- Mapa e localização aparecerão aqui -->
+            </div>
+
+            <button type="submit" id="saveButton">Salvar</button>
+        </form>
+    </section>
+
+    <!-- Tabela de fotos salvas -->
+    <section id="memories">
+        <h2>Fotos Salvas</h2>
+        <table id="photoTable" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Localização</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Registros serão listados aqui -->
+            </tbody>
+        </table>
+
+        <!-- Modal para visualizar detalhes da foto -->
+        <div id="photoModal" style="display:none;">
+            <h3>Detalhes da Foto</h3>
+            <p id="modalTitle"></p>
+            <p id="modalDescription"></p>
+            <div id="modalPhoto"></div>
+            <div id="modalLocation"></div>
+            <button type="button" id="closeModalButton">Fechar</button>
+        </div>
+
+        <!-- Modal de confirmação para exclusão -->
+        <div id="deleteModal" style="display:none;">
+            <p>Tem certeza que deseja excluir esta foto?</p>
+            <button type="button" id="confirmDeleteButton">Sim</button>
+            <button type="button" id="cancelDeleteButton">Não</button>
+        </div>
+
+        <!-- Formulário de edição -->
+        <div id="editForm" style="display:none;">
+            <h3>Editar Foto</h3>
+            <form id="editPhotoForm">
+                <label for="editTitle">Título:</label>
+                <input type="text" id="editTitle" name="editTitle" required>
+
+                <label for="editDescription">Descrição:</label>
+                <textarea id="editDescription" name="editDescription"></textarea>
+
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
