@@ -133,7 +133,6 @@ function renderTable() {
             <td>${photo.date}</td>
             <td>
                 <button onclick="editPhoto(${index})">Editar</button>
-                <button onclick="deletePhoto(${index})">Excluir</button>
                 <button onclick="viewDetails(${index})">Visualizar</button>
             </td>
         `;
@@ -151,14 +150,18 @@ function editPhoto(index) {
     editIndex = index;
 }
 
-// Excluir uma foto
-function deletePhoto(index) {
-    if (confirm('Tem certeza que deseja excluir esta foto?')) {
-        photos.splice(index, 1);
-        localStorage.setItem('photos', JSON.stringify(photos));
-        renderTable();
+// Remover a foto atual
+document.getElementById('removePhotoButton').addEventListener('click', () => {
+    if (capturedImage) {
+        // Limpar a imagem capturada
+        capturedImage = null;
+        isPhotoTaken = false; // Resetar a variável
+        document.getElementById('photoPreview').innerHTML = ''; // Limpar visualização
+        alert('Foto removida com sucesso.');
+    } else {
+        alert('Nenhuma foto para remover.');
     }
-}
+});
 
 // Visualizar detalhes da foto
 function viewDetails(index) {
