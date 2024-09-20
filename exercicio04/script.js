@@ -195,3 +195,28 @@ function viewDetails(index) {
         }
     });
 }
+
+function showMap(latitude, longitude) {
+    const mapURL = `https://maps.google.com/maps?q=${latitude},${longitude}&z=15&output=embed`;
+    localStorage.setItem('currentLocation', `${latitude},${longitude}`);
+    document.getElementById('mapContainer').innerHTML = `<iframe src="${mapURL}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
+}
+
+
+// Marcar a localização com geolocalização
+document.getElementById('getLocationButton').addEventListener('click', () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const { latitude, longitude } = position.coords;
+            displayLocation(latitude, longitude);
+            showMap(latitude, longitude); // Chama a função showMap
+        }, () => {
+            const lat = prompt('Digite a latitude:');
+            const lng = prompt('Digite a longitude:');
+            displayLocation(lat, lng);
+            showMap(lat, lng); // Chama a função showMap
+        });
+    } else {
+        alert('Geolocalização não suportada. Digite manualmente.');
+    }
+});
