@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loja de Informática - Compre notebooks, monitores, teclados e mais.">
+    <title>Loja de Informática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav aria-label="Menu de navegação principal">
+        <ul>
+            <li><a href="#home" onclick="goBackToHome()">Início</a></li>
+            <li><a href="#cart" onclick="displayCart()">Carrinho</a></li>
+        </ul>
+    </nav>
+
+    <!-- Página Inicial -->
+    <section id="home">
+        <h1>Bem-vindo à nossa Loja de Informática</h1>
+        <div id="product-list"></div>
+    </section>
+
+    <!-- Detalhes do Produto -->
+    <section id="product-details" style="display:none;">
+        <h2 id="product-name"></h2>
+        <img id="product-image" src="" alt="">
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+        <button id="add-to-cart">Adicionar ao Carrinho</button>
+        <button onclick="goBackToHome()">Voltar</button>
+    </section>
+
+    <!-- Carrinho de Compras -->
+    <section id="cart" style="display:none;">
+        <h2>Carrinho de Compras</h2>
+        <div id="cart-items"></div>
+        <p>Total: R$ <span id="cart-total">0</span></p>
+        <button id="checkout-btn">Finalizar Compra</button>
+        <button onclick="goBackToHome()">Voltar</button>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Loja de Informática. Todos os direitos reservados.</p>
+        <p>Formas de pagamento: Cartão de Crédito, Boleto Bancário.</p>
+        <p>Siga-nos nas redes sociais: <a href="https://www.instagram.com">Instagram</a>, <a href="https://www.facebook.com">Facebook</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

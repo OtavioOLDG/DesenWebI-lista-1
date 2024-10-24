@@ -1,0 +1,268 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navegação */
+nav {
+    background-color: #2b2d42;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #edf2f4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ef233c;
+    transition: color 0.3s ease;
+}
+
+/* Página Inicial e Produtos */
+#home {
+    padding: 20px;
+    text-align: center;
+}
+
+#home h1 {
+    color: #2b2d42;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#product-list div {
+    background-color: #edf2f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#product-list img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+#product-list h3 {
+    margin: 15px 0;
+    color: #2b2d42;
+    font-size: 1.4rem;
+}
+
+#product-list p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #ef233c;
+    font-weight: bold;
+}
+
+#product-list button {
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#product-list button:hover {
+    background-color: #d90429;
+}
+
+/* Detalhes do Produto */
+#product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+#product-details img {
+    max-width: 50%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#product-details h2 {
+    color: #2b2d42;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#product-details p {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#product-details button {
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#product-details button:hover {
+    background-color: #d90429;
+}
+
+/* Carrinho */
+#cart {
+    padding: 20px;
+    text-align: center;
+}
+
+#cart h2 {
+    color: #2b2d42;
+    margin-bottom: 20px;
+}
+
+#cart-items div {
+    background-color: #edf2f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#cart-items p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#cart-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ef233c;
+}
+
+#checkout-btn {
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #d90429;
+}
+
+/* Checkout */
+#checkout {
+    padding: 20px;
+    text-align: center;
+}
+
+#checkout h2 {
+    color: #2b2d42;
+    margin-bottom: 20px;
+}
+
+#checkout form {
+    background-color: #edf2f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#checkout label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+#checkout input, #checkout select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+#checkout button {
+    background-color: #ef233c;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+#checkout button:hover {
+    background-color: #d90429;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2b2d42;
+    color: #edf2f4;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ef233c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d90429;
+    transition: color 0.3s ease;
+}
